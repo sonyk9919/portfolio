@@ -1,0 +1,40 @@
+{
+  "$comment": "포트폴리오의 목차입니다. work는 소속(회사/개인), projects는 각 소속에 속한 프로젝트입니다. 프로젝트의 frontmatter에 있는 work 값이 소속 파일명과 연결됩니다.",
+  "profile": "content/profile.md",
+  "sections": [
+    {
+      "id": "about",
+      "label": "About",
+      "nav": true
+    },
+    {
+      "id": "work",
+      "label": "Work",
+      "nav": true
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "nav": true
+    }
+  ],
+  "work": [
+    "content/work/epapyrus.md",
+    "content/work/revibio.md",
+    "content/work/side.md"
+  ],
+  "projects": [
+    "content/projects/canvas-scroll.md",
+    "content/projects/decorator-analytics.md",
+    "content/projects/pdf-annotation.md",
+    "content/projects/test-automation.md",
+    "content/projects/sdk-guide.md",
+    "content/projects/ooxml-capture.md",
+    "content/projects/community.md",
+    "content/projects/web-vitals.md",
+    "content/projects/cms.md",
+    "content/projects/purchase-flow.md",
+    "content/projects/sudal.md",
+    "content/projects/jobsync.md"
+  ]
+}

@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #18181b;
+}
+
+.dark {
+  --background: #08080b;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -12,15 +19,197 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.prose-portfolio p + p {
+  margin-top: 1em;
+}
+
+.prose-portfolio a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-portfolio ul {
+  margin-top: 1em;
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.prose-portfolio img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.5em 0;
+  border-radius: 0.6rem;
+  border: 1px solid rgb(0 0 0 / 0.08);
+  background: rgb(0 0 0 / 0.02);
+}
+
+.dark .prose-portfolio img {
+  border-color: rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.03);
+}
+
+.prose-portfolio figure {
+  margin: 1.5em 0;
+}
+
+.prose-portfolio figcaption,
+.prose-portfolio img + em {
+  display: block;
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  font-style: normal;
+  color: rgb(113 113 122);
+  text-align: center;
+}
+
+.prose-portfolio h2,
+.prose-portfolio h3 {
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.prose-portfolio h2 {
+  font-size: 1.15em;
+}
+
+.prose-portfolio h3 {
+  font-size: 1.02em;
+}
+
+.prose-portfolio blockquote {
+  margin: 1.4em 0;
+  padding-left: 1em;
+  border-left: 2px solid rgb(0 0 0 / 0.15);
+  color: rgb(113 113 122);
+}
+
+.dark .prose-portfolio blockquote {
+  border-left-color: rgb(255 255 255 / 0.2);
+}
+
+.prose-portfolio pre {
+  margin: 1.4em 0;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background: rgb(0 0 0 / 0.06);
+  padding: 0.9em 1em;
+  font-size: 0.86em;
+}
+
+.dark .prose-portfolio pre {
+  background: rgb(255 255 255 / 0.07);
+}
+
+.prose-portfolio pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose-portfolio code {
+  border-radius: 0.25rem;
+  background: rgb(0 0 0 / 0.06);
+  padding: 0.1em 0.35em;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.9em;
+}
+
+.dark .prose-portfolio img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.5em 0;
+  border-radius: 0.6rem;
+  border: 1px solid rgb(0 0 0 / 0.08);
+  background: rgb(0 0 0 / 0.02);
+}
+
+.dark .prose-portfolio img {
+  border-color: rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.03);
+}
+
+.prose-portfolio figure {
+  margin: 1.5em 0;
+}
+
+.prose-portfolio figcaption,
+.prose-portfolio img + em {
+  display: block;
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  font-style: normal;
+  color: rgb(113 113 122);
+  text-align: center;
+}
+
+.prose-portfolio h2,
+.prose-portfolio h3 {
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.prose-portfolio h2 {
+  font-size: 1.15em;
+}
+
+.prose-portfolio h3 {
+  font-size: 1.02em;
+}
+
+.prose-portfolio blockquote {
+  margin: 1.4em 0;
+  padding-left: 1em;
+  border-left: 2px solid rgb(0 0 0 / 0.15);
+  color: rgb(113 113 122);
+}
+
+.dark .prose-portfolio blockquote {
+  border-left-color: rgb(255 255 255 / 0.2);
+}
+
+.prose-portfolio pre {
+  margin: 1.4em 0;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background: rgb(0 0 0 / 0.06);
+  padding: 0.9em 1em;
+  font-size: 0.86em;
+}
+
+.dark .prose-portfolio pre {
+  background: rgb(255 255 255 / 0.07);
+}
+
+.prose-portfolio pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose-portfolio code {
+  background: rgb(255 255 255 / 0.1);
 }

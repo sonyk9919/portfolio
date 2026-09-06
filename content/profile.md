@@ -2,17 +2,12 @@
 name: 손유관
 nameEn: SON YUGWAN
 title: Frontend Developer
-tagline: 증상을 덮기보다 구조를 먼저 들여다봅니다.
 email: sonyk9919@gmail.com
 location: Seoul, Korea
-experience: 2년 7개월
+description: 문서 뷰어와 학습 플랫폼을 만들어 온 프론트엔드 개발자입니다.
 stats:
   - label: 경력
     value: 2년 7개월
-  - label: 스크롤 지연 개선
-    value: "95%"
-  - label: 커뮤니티 MAU
-    value: "15,000+"
 socials:
   - label: GitHub
     href: https://github.com/sonyk9919

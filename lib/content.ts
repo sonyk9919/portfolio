@@ -78,7 +78,7 @@ export const getProfile = async (): Promise<Profile> => {
     name: asString(data.name, "이름"),
     nameEn: asString(data.nameEn, "NAME"),
     title: asString(data.title),
-    tagline: asString(data.tagline),
+    description: asString(data.description),
     email: asString(data.email),
     location: asString(data.location),
     socials: asLinks(data.socials),

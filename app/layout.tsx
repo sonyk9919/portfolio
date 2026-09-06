@@ -19,7 +19,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 
   return {
     title: `${profile.name} — ${profile.title}`,
-    description: profile.tagline,
+    description: profile.description,
   };
 };
 

@@ -15,13 +15,9 @@ export const HeroSection = ({ profile }: Props) => (
         {profile.name}
       </h1>
 
-      <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
-        {profile.tagline}
-      </p>
-
-      <div className="mt-10 flex flex-wrap items-center gap-3">
+      <div className="mt-8 flex flex-wrap items-center gap-3">
         <a
-          href="#projects"
+          href="#work"
           className="rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
         >
           프로젝트 보기

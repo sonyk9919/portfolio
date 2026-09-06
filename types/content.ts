@@ -31,7 +31,7 @@ export type Profile = {
   stats: Stat[];
   nameEn: string;
   title: string;
-  tagline: string;
+  description: string;
   email: string;
   location: string;
   socials: SocialLink[];

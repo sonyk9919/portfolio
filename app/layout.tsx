@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider, themeInitScript } from "@/components/ui/ThemeProvider";
 import { getProfile } from "@/lib/content";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,10 +20,29 @@ const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const profile = await getProfile();
+  const title = `${profile.name} — ${profile.title}`;
 
   return {
-    title: `${profile.name} — ${profile.title}`,
+    metadataBase: new URL(getSiteUrl()),
+    title,
     description: profile.description,
+    openGraph: {
+      type: "website",
+      locale: "ko_KR",
+      url: "/",
+      siteName: title,
+      title,
+      description: profile.description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: profile.description,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 };
 

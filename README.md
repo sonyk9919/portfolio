@@ -43,6 +43,20 @@ Vercel 등에 배포할 때는 대시보드의 환경변수에 같은 키로 등
 | `project_open` | 프로젝트 아코디언을 열 때 | `project_slug`, `project_title` |
 | `outbound_click` | 프로젝트의 외부 링크 클릭 시 | `link_label`, `link_href` |
 
+## 검색엔진 등록
+
+`/robots.txt` 와 `/sitemap.xml` 이 자동 생성됩니다. 주소는 `NEXT_PUBLIC_SITE_URL`
+환경변수를 따르며, Vercel 배포 시에는 프로덕션 도메인을 자동으로 사용합니다.
+
+구글 서치콘솔 등록 순서:
+
+1. [Search Console](https://search.google.com/search-console)에서 **URL 접두어** 방식으로 사이트 추가
+2. 소유권 확인 — HTML 태그 방식을 고르고, 받은 코드를 `app/layout.tsx` 의
+   `generateMetadata` 안 `verification.google` 에 넣은 뒤 재배포
+3. 확인 완료 후 **Sitemaps** 메뉴에서 `sitemap.xml` 제출
+
+색인까지는 보통 며칠 걸립니다. **URL 검사** 도구에서 색인 요청을 하면 조금 빨라집니다.
+
 ## 명령어
 
 | 명령어 | 설명 |

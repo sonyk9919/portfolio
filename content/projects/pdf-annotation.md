@@ -23,7 +23,7 @@ highlights:
   - PDF Reference 기반으로 데이터 구조를 재설계해 Acrobat·Chrome 등 표준 뷰어와의 호환성 확보
 links:
   - label: MuPDF Viewer
-    href: https://mupdf.epapyrus.com/
+    href: https://webviewer.mupdf.com/demo
 ---
 
 주석 편집을 타입별로 분기했습니다. WASM 모듈에 이미 구현된 타입은 모듈을 그대로 쓰고,

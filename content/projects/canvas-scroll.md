@@ -19,7 +19,7 @@ highlights:
   - 이미 그린 셀은 재사용하고 미렌더링 셀만 선별 드로잉한 뒤 뷰포트 영역을 메인 캔버스로 일괄 전송
 links:
   - label: StreamDocs-Vu
-    href: https://streamdocs.epapyrus.com/
+    href: https://demo.epapyrus.com/ko/streamdocs
 ---
 
 원인은 두 가지가 겹쳐 있었습니다. 셀별로 드로잉을 개별 호출해 **드로우 콜이 셀 수에

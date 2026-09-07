@@ -3,7 +3,7 @@ work: epapyrus
 title: 서버 의존 없는 PDF 주석 편집 사이클
 tagline: WASM 모듈과 PDF Reference 규격 분석으로 클라이언트 단독 CRUD 구현
 role: 프론트 2인 중 주석 CRUD 단독 구현 · 해외 PM·디자이너와 협업
-period: 2024 — 2025 · 약 1개월
+period: 약 1개월
 stack: [TypeScript, WASM, PDF Reference, Angular]
 accent: "#0369a1"
 problem: 고객사가 서버 없이도 도입할 수 있는 클라이언트 단독 신제품을 출시해야 했습니다. 그러려면 서버가 담당하던 주석 생성·수정·삭제 전체 사이클을 클라이언트에서 다시 구현해야 했는데, 사내 WASM 모듈에는 스탬프·폴리곤 등 미구현 주석 타입이 남아 있어 모듈에만 의존해서는 편집 사이클을 완결할 수 없었습니다.

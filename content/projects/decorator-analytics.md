@@ -3,7 +3,7 @@ work: epapyrus
 title: Decorator 기반 사용 통계 수집
 tagline: 비즈니스 로직을 건드리지 않고 150여 개 기능의 사용 통계 수집
 role: 수집 구조 설계·구현 단독 · 백엔드 1인과 API 스펙 협의
-period: 2024 — 2025 · 약 3주
+period: 약 3주
 stack: [TypeScript, Decorator, RxJS, AOP]
 accent: "#7c3aed"
 problem: 에디터 기능의 고도화·경량화를 판단하려면 약 150개 기능의 사용 통계가 필요했습니다. 그런데 각 메서드에 수집 로직을 직접 넣으면 비즈니스 로직에 통계 코드가 섞여, 나중에 그 기능을 맡는 사람이 맥락을 모른 채 수정하다 통계를 누락시킬 위험이 컸습니다.

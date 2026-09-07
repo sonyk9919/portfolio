@@ -3,7 +3,6 @@ work: revibio
 title: 구매 플로우와 교수용 시험 통계 대시보드
 tagline: 할인 중첩 정책 로직 설계와 300~400명 규모 시험 데이터 시각화
 role: 구매 플로우 비즈니스 로직 단독 설계·구현
-period: 2023 — 2024
 stack: [Next.js, TypeScript, Recharts, TanStack Table, PG 연동]
 accent: "#e11d48"
 problem: 가격 할인·행사 할인·쿠폰이 각각 존재하지만 중첩 적용은 불가한 정책이었습니다. 어떤 할인이 적용되느냐에 따라 최종 금액이 달라지는데, 사용자가 손해 보는 조합이 선택되면 안 되는 상황이었습니다.

@@ -3,7 +3,6 @@ work: revibio
 title: Core Web Vitals 개선으로 Lighthouse 60 → 90점
 tagline: 이미지 최적화·스켈레톤 UI·App Router 마이그레이션 3단계
 role: 분석·개선 단독 진행
-period: 2023 — 2024
 stack: [Next.js, App Router, RSC, WebP, TypeScript]
 accent: "#65a30d"
 problem: Lighthouse 성능 점수가 60점이었습니다. LCP·FCP가 지연되고 로딩 중에 CLS가 발생했는데, Core Web Vitals는 Google 검색 랭킹 신호이기 때문에 낮은 점수가 곧 검색 유입 저하로 직결되는 상황이었습니다.

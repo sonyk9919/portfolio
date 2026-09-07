@@ -3,7 +3,6 @@ work: epapyrus
 title: Canvas 스프레드시트 뷰어 스크롤 지연 개선
 tagline: 드로우 콜 배칭과 오프스크린 캐싱 2단계로 1,500ms를 75ms까지
 role: 프론트 3인 중 스크롤 지연 이슈 단독 담당
-period: 2024 — 2025
 stack: [TypeScript, Angular, Canvas 2D, Path2D, OffscreenCanvas]
 accent: "#c2410c"
 problem: 대형 회계법인(Big4) 고객사로부터 뷰어 품질 개선을 요청받아 이슈를 정리·분담하던 중, 벡터 요소가 많은 대용량 스프레드시트에서 스크롤할 때마다 1~2초씩 멈추는 현상을 발견했습니다. 문서 탐색이라는 가장 기본적인 조작에서 프레임 드랍이 나 열람 자체가 불가능한 수준이었고, 곧 사용자 이탈로 이어지는 문제였습니다.

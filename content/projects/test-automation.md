@@ -3,7 +3,6 @@ work: epapyrus
 title: Cypress · Vitest 테스트 환경 신규 구축
 tagline: 배포마다 30분 이상 걸리던 수동 QA를 자동화로 대체
 role: 테스트 환경 설계·구축 단독
-period: 2024 — 2025
 stack: [Cypress, Vitest, TypeScript]
 accent: "#059669"
 problem: 주석 기능은 배포할 때마다 주석 타입별로 생성·수정·삭제를 일일이 눌러가며 확인해야 했습니다. 매 릴리즈마다 30분에서 1시간씩 같은 체크리스트를 반복했고, 사람이 하는 일이라 빠뜨리는 항목이 생길 수밖에 없었습니다.

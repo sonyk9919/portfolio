@@ -3,7 +3,6 @@ work: epapyrus
 title: 반복 문의 패턴 분석과 SDK 가이드 문서화
 tagline: 주 최대 8시간 반복되던 대응 리소스를 문서 구조화로 제거
 role: 기술지원팀·개발팀 브릿지 · 문서 설계·작성 단독
-period: 2024 — 2025
 stack: [Technical Writing, SDK, API Design]
 accent: "#b45309"
 problem: 기술지원팀으로부터 SDK 사용법과 예시 코드에 관한 같은 유형의 문의를 주 3~4회 계속 받았습니다. 건당 예시 작성과 안내 문구 구성, 테스트까지 평균 2시간이 걸렸고, 결과적으로 주 최대 8시간을 단순 반복 대응에 쓰고 있었습니다.

@@ -3,7 +3,6 @@ work: epapyrus
 title: OOXML 렌더링 정합성 확보와 Canvas 영역 캡처
 tagline: 엑셀과 동일한 레이아웃 재현, 보안 환경에서도 동작하는 캡처 기능
 role: 기능별 단독 구현
-period: 2024 — 2025
 stack: [TypeScript, Canvas 2D, OOXML, Clipboard API]
 accent: "#4d7c0f"
 problem: 고객사로부터 스프레드시트 렌더링이 엑셀과 다르다는 품질 클레임을 받았습니다. 또 보안 프로그램이 설치된 고객사 환경에서는 OS 캡처 도구가 차단되어, 문서 일부를 캡처하지 못해 내부 자료를 만들 때 불편을 겪는다는 제보도 있었습니다.

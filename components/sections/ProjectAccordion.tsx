@@ -9,17 +9,10 @@ type Props = {
   project: Project;
   open: boolean;
   onToggle: (slug: string) => void;
-  onRegister: (slug: string, node: HTMLElement | null) => void;
 };
 
-export const ProjectAccordion = ({
-  project,
-  open,
-  onToggle,
-  onRegister,
-}: Props) => (
+export const ProjectAccordion = ({ project, open, onToggle }: Props) => (
   <article
-    ref={(node) => onRegister(project.slug, node)}
     className={`relative overflow-hidden rounded-xl border transition-colors ${
       open
         ? "border-black/15 bg-white/80 dark:border-white/20 dark:bg-white/[0.06]"
@@ -44,9 +37,11 @@ export const ProjectAccordion = ({
             <span className="text-base font-semibold tracking-tight sm:text-lg">
               {project.title}
             </span>
-            <span className="text-xs text-neutral-500 dark:text-neutral-400">
-              {project.period}
-            </span>
+            {project.period && (
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                {project.period}
+              </span>
+            )}
           </span>
 
           <span className="mt-1 block text-sm text-neutral-600 dark:text-neutral-400">
@@ -133,10 +128,14 @@ export const ProjectAccordion = ({
           <dt className="text-neutral-500 dark:text-neutral-400">역할</dt>
           <dd className="mt-0.5">{project.role}</dd>
         </div>
-        <div>
-          <dt className="text-neutral-500 dark:text-neutral-400">기간</dt>
-          <dd className="mt-0.5">{project.period}</dd>
-        </div>
+        {project.period && (
+          <div>
+            <dt className="text-neutral-500 dark:text-neutral-400">
+              소요 기간
+            </dt>
+            <dd className="mt-0.5">{project.period}</dd>
+          </div>
+        )}
       </dl>
 
       <div className="mt-5 flex flex-wrap gap-1.5">

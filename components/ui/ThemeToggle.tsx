@@ -41,7 +41,7 @@ export const ThemeToggle = () => {
       type="button"
       onClick={toggle}
       aria-label={isDark ? "라이트 모드로 전환" : "다크 모드로 전환"}
-      className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/70 text-neutral-700 backdrop-blur transition-colors hover:bg-white dark:border-white/15 dark:bg-white/5 dark:text-neutral-200 dark:hover:bg-white/10"
+      className="grid h-9 w-9 shrink-0 place-items-center sm:h-10 sm:w-10 rounded-full border border-black/10 bg-white/70 text-neutral-700 backdrop-blur transition-colors hover:bg-white dark:border-white/15 dark:bg-white/5 dark:text-neutral-200 dark:hover:bg-white/10"
     >
       {isDark ? <SunIcon /> : <MoonIcon />}
     </button>

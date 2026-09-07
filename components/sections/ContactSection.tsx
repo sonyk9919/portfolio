@@ -8,7 +8,7 @@ type Props = {
 export const ContactSection = ({ profile }: Props) => (
   <section
     id="contact"
-    className="mx-auto max-w-3xl scroll-mt-20 px-6 py-32 pb-40 lg:max-w-4xl lg:px-10"
+    className="mx-auto max-w-3xl scroll-mt-20 px-6 pb-32 pt-20 lg:max-w-4xl lg:px-10"
   >
     <SectionTitle index="03" label="Contact" />
 

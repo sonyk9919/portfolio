@@ -9,7 +9,7 @@ type Props = {
 export const AboutSection = ({ profile }: Props) => (
   <section
     id="about"
-    className="mx-auto max-w-3xl scroll-mt-20 px-6 py-32 lg:max-w-4xl lg:px-10"
+    className="mx-auto max-w-3xl scroll-mt-20 px-6 py-20 lg:max-w-4xl lg:px-10"
   >
     <SectionTitle index="01" label="About" />
 

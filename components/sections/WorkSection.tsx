@@ -6,17 +6,11 @@ import type { WorkGroup } from "@/types/content";
 
 type Props = {
   groups: WorkGroup[];
-  openSlug: string | null;
+  openSlugs: ReadonlySet<string>;
   onToggle: (slug: string) => void;
-  onRegister: (slug: string, node: HTMLElement | null) => void;
 };
 
-export const WorkSection = ({
-  groups,
-  openSlug,
-  onToggle,
-  onRegister,
-}: Props) => (
+export const WorkSection = ({ groups, openSlugs, onToggle }: Props) => (
   <section
     id="work"
     className="mx-auto max-w-3xl scroll-mt-20 px-6 py-20 lg:max-w-4xl lg:px-10"
@@ -31,9 +25,8 @@ export const WorkSection = ({
         <WorkGroupItem
           key={group.slug}
           group={group}
-          openSlug={openSlug}
+          openSlugs={openSlugs}
           onToggle={onToggle}
-          onRegister={onRegister}
         />
       ))}
     </ol>

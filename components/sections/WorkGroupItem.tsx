@@ -5,17 +5,11 @@ import type { WorkGroup } from "@/types/content";
 
 type Props = {
   group: WorkGroup;
-  openSlug: string | null;
+  openSlugs: ReadonlySet<string>;
   onToggle: (slug: string) => void;
-  onRegister: (slug: string, node: HTMLElement | null) => void;
 };
 
-export const WorkGroupItem = ({
-  group,
-  openSlug,
-  onToggle,
-  onRegister,
-}: Props) => {
+export const WorkGroupItem = ({ group, openSlugs, onToggle }: Props) => {
   const isPersonal = group.kind === "personal";
 
   return (
@@ -78,9 +72,8 @@ export const WorkGroupItem = ({
             <ProjectAccordion
               key={project.slug}
               project={project}
-              open={openSlug === project.slug}
+              open={openSlugs.has(project.slug)}
               onToggle={onToggle}
-              onRegister={onRegister}
             />
           ))}
         </div>

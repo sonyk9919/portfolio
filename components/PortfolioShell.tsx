@@ -1,11 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { WorkSection } from "@/components/sections/WorkSection";
 import { SiteHeader } from "@/components/ui/SiteHeader";
-import { useAnchoredToggle } from "@/components/ui/useAnchoredToggle";
 import type { Navigator, Profile, WorkGroup } from "@/types/content";
 
 type Props = {
@@ -19,7 +19,16 @@ export const PortfolioShell = ({
   profile,
   workGroups,
 }: Props) => {
-  const { openSlug, toggle, register } = useAnchoredToggle();
+  const [openSlugs, setOpenSlugs] = useState<ReadonlySet<string>>(
+    () => new Set(),
+  );
+
+  const toggle = (slug: string) =>
+    setOpenSlugs((current) => {
+      const next = new Set(current);
+      if (!next.delete(slug)) next.add(slug);
+      return next;
+    });
 
   const navSections = navigator.sections.filter(
     (section) => section.nav !== false,
@@ -34,9 +43,8 @@ export const PortfolioShell = ({
         <AboutSection profile={profile} />
         <WorkSection
           groups={workGroups}
-          openSlug={openSlug}
+          openSlugs={openSlugs}
           onToggle={toggle}
-          onRegister={register}
         />
         <ContactSection profile={profile} />
       </main>

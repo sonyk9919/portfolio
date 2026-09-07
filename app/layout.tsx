@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider, themeInitScript } from "@/components/ui/ThemeProvider";
 import { getProfile } from "@/lib/content";
 import "./globals.css";
@@ -13,6 +14,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const profile = await getProfile();
@@ -35,6 +38,7 @@ const RootLayout = ({ children }: LayoutProps<"/">) => (
     <body className="min-h-full">
       <ThemeProvider>{children}</ThemeProvider>
     </body>
+    {gaId && <GoogleAnalytics gaId={gaId} />}
   </html>
 );
 

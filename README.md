@@ -24,6 +24,25 @@ content/
 └── projects/           각 소속에서 한 프로젝트
 ```
 
+## Google Analytics
+
+`NEXT_PUBLIC_GA_ID` 환경변수에 GA4 측정 ID(`G-XXXXXXXXXX`)를 넣으면 활성화됩니다.
+값이 없으면 스크립트를 아예 로드하지 않으므로 로컬 개발에는 영향이 없습니다.
+
+```bash
+cp .env.example .env.local
+# .env.local 에 측정 ID 입력
+```
+
+Vercel 등에 배포할 때는 대시보드의 환경변수에 같은 키로 등록합니다.
+
+페이지뷰 외에 아래 이벤트를 수집합니다.
+
+| 이벤트 | 시점 | 파라미터 |
+| --- | --- | --- |
+| `project_open` | 프로젝트 아코디언을 열 때 | `project_slug`, `project_title` |
+| `outbound_click` | 프로젝트의 외부 링크 클릭 시 | `link_label`, `link_href` |
+
 ## 명령어
 
 | 명령어 | 설명 |
